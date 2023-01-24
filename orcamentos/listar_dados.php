@@ -18,8 +18,8 @@
 		$dados .= "<thead>";
 		$dados .= "<tr>";
 		$dados .= "<th>Id</th>";
-		$dados .= "<th>Vendedor</th>";
 		$dados .= "<th>Cliente</th>";
+		$dados .= "<th>Vendedor</th>";
 		$dados .= "<th>Valor</th>";
 		$dados .= "<th>Descricao</th>";
 		$dados .= "<th>Data</th>";
@@ -41,7 +41,7 @@
 			$dados .= "<td>" . $row["descricao"] . "</td>";
 			$dados .= "<td>" . $row["data"] . "</td>";
 			$dados .= "<td>" . $row["horario"] . "</td>";
-			$dados .= "<td> <button type='button' class='btn btn-outline-primary' data-bs-toggle='modal' data-bs-target='#modalEditar' onclick='editarDados($id)'>Editar </button> 
+			$dados .= "<td> <button type='button' class='btn btn-outline-primary botaoEditar' data-bs-toggle='modal' data-bs-target='#modalEditar' onclick='editarDados($id)'>Editar </button> 
 			<button type='button' class='btn btn-outline-danger' data-bs-toggle='modal' data-bs-target='#modalApagar' onclick='apagarDados($id)'>Apagar</button></td>";
 			$dados .= "</tr>";
 		}
@@ -53,7 +53,7 @@
 		$exibir = ['status' => true , 'dados' => $dados];
 	}
 	else{
-		$exibir = ['status' => false , 'msg' => "<p> Erro: Nenhum orçamento foi encontrado </p>"];
+		$exibir = ['status' => false , 'msg' => "<div class='alert alert-danger' role='alert'> Erro: Nenhum orçamento foi encontrado </div>"];
 	}
 	
 	//Codifica a tabela para JSON

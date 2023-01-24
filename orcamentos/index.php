@@ -4,15 +4,17 @@
 		<meta charset="utf-8">
         <title>Oficina 2.0</title>
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    </head>
+		<link rel="stylesheet" href="css/index.css">
+	</head>
     <body>
         <div class="container">
-		
-			<div class="row mt-4">
+			<!--Cabecalho-->
+			<div class="row mt-4 divCabecalho">
 				<div class="col-lg-12 d-flex justify-content-between align-items-center">
 				    <h3>Orçamentos</h1>
 					<div>
-						<button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#modalCadastro" >Cadastrar</button>
+						<button type="button" class="btn btn-outline-dark btnCabecalho" data-bs-toggle="modal"><a href="pesquisar_dados.php" class="p-cabecalho" style="text-decoration:none;">Pesquisar</a></button>
+						<button type="button" class="btn btn-outline-dark btnCabecalho" data-bs-toggle="modal" data-bs-target="#modalCadastro" >Cadastrar</button>
 					</div>
 				</div>
 			</div>
@@ -24,8 +26,9 @@
 				</div>
 			</div>
 
+
 			<!-- Modal de cadastro-->
-			<div class="modal fade" id="modalCadastro" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal fade" id="modalCadastro" tabindex="-1" aria-hidden="true">
 			  <div class="modal-dialog">
 				<div class="modal-content">
 				  <div class="modal-header">
@@ -82,22 +85,22 @@
 					<span id="alertaErroEdicao"></span>
 					<form class="row g-3" id="form-editar">
 							<div class="col-md-12">
-								<input class="form-control" placeholder="Cliente" type="text" name="cliente"/>
+								<input class="form-control" placeholder="Cliente" id="editCliente" type="text" name="cliente"/>
 							</div>
 							<div class="col-md-12">
-								<input class="form-control" placeholder="Vendedor" type="text" name="vendedor"/> 
+								<input class="form-control" placeholder="Vendedor" id="editVendedor" type="text" name="vendedor"/> 
 							</div>
 							<div class="col-md-6"> 
-								<input class="form-control" type="date" name="data_orc"/>
+								<input class="form-control" type="date"  id="editData" name="data_orc"/>
 							</div>
 							<div class="col-md-6">
-								<input class="form-control" type="time" name="hora_orc"/>
+								<input class="form-control" type="time" id="editHorario" name="hora_orc"/>
 							</div>
 							<div class="col-md-12">
-								<input class="form-control" placeholder="Descricao" type="text" name="descricao"/>
+								<input class="form-control" placeholder="Descricao" id="editDescricao" type="text" name="descricao"/>
 							</div>
 							<div class="col-md-12">
-								<input class="form-control" placeholder="50,00" type="number" name="valor"/>
+								<input class="form-control" placeholder="50,00" id="editValor" type="number" name="valor"/>
 							</div>
 							<input class="btn btn-primary" type="submit" id="botao-editar" value="Salvar Mudanças"/>
 						</form>
@@ -131,12 +134,9 @@
 			</div>
 			</div>
 			<!--Fim Modal Deletar-->
-			
-
-
         </div>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-		<script src="js/a.js"></script>
+		<script src="js/index.js"></script>
 	
     </body>
 </html>

@@ -4,3 +4,13 @@
 .p-cabecalho:hover{
     color: white;
 }
+.form-busca{
+    padding-bottom: 20px;
+}
+.botao-busca{
+    position: relative;
+    top:10px;
+}
+.divCabecalho{
+    padding-bottom: 20px;
+}

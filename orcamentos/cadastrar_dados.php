@@ -8,8 +8,9 @@
 	$valor = $dados['valor'];
 	$descricao = $dados['descricao'];
 	$data = $dados['data_orc'];
-	$horario = $dados['horario'];
+	$horario = $dados['hora_orc'];
 	$horario = $horario . ":00";
+	$retorna = "";
 	
 	//Validar o formulário
 	
